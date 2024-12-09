@@ -1,0 +1,23 @@
+server:
+  port: 9090
+  error:
+    include-message: always
+
+spring:
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    url: jdbc:mysql://localhost:3306/Transact
+    username: root
+    password: system
+    driverClassName: com.mysql.cj.jdbc.Driver
+    webmvc:
+      cors:
+        allowed-origins: "http://localhost:3000"
+  sql:
+    init:
+      platform: mysql
+
